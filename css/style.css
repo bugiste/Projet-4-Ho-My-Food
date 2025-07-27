@@ -1,0 +1,348 @@
+@charset "UTF-8";
+.button, .ExplorerBouton {
+  background: linear-gradient(360deg, #9356DC -11%, #FF79DA 123%);
+  color: white;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button:hover, .ExplorerBouton:hover {
+  background: linear-gradient(356deg, #a86ee0 0%, #b493de 33%, #ff93e1 100%);
+}
+
+.logo {
+  display: flex;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 1.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.barreRech {
+  width: 100%;
+  height: 2.5em;
+  background-color: rgb(243, 243, 243);
+  border: solid grey; /* Style et couleur communs */
+  border-width: 1px 0 2px 0; /* (haut droite bas gauche) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.localisation {
+  border: none;
+  outline: none; /* Supprime aussi le contour lors du focus */
+  margin-left: 1em;
+  font-size: 0.8em;
+}
+
+.fonctionnement--h2 {
+  margin-bottom: 2em;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: normal;
+  margin-bottom: 1.5em;
+  display: grid;
+  align-content: space-between;
+}
+
+.BoutonsChoix {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  /* Espace entre les boutons */
+}
+.BoutonsChoix button {
+  margin: 0 auto;
+  /* Marge automatique à gauche/droite */
+  width: 90%;
+  height: 2.5em;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 1.5em;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  padding: 1em;
+}
+.BoutonsChoix button::before {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  content: "1";
+  color: rgb(147, 86, 220);
+  font-weight: bold;
+  color: white;
+  margin-right: 8px;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgb(147, 86, 220);
+  background: rgb(147, 86, 220);
+  border-width: thin;
+  width: 20px;
+  height: 20px;
+}
+.BoutonsChoix button i {
+  margin-right: 10px;
+}
+.BoutonsChoix button.choix2 {
+  margin: 0 auto;
+  /* Marge automatique à gauche/droite */
+  width: 90%;
+  height: 2.5em;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 1.5em;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 15px;
+}
+.BoutonsChoix button.choix2::before {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  content: "2";
+  color: rgb(147, 86, 220);
+  font-weight: bold;
+  color: white;
+  margin-right: 8px;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgb(147, 86, 220);
+  background: rgb(147, 86, 220);
+  border-width: thin;
+  width: 20px;
+  height: 20px;
+}
+.BoutonsChoix button.choix3 {
+  margin: 0 auto;
+  /* Marge automatique à gauche/droite */
+  width: 90%;
+  height: 2.5em;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 1.5em;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 15px;
+}
+.BoutonsChoix button.choix3::before {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  content: "3";
+  color: rgb(147, 86, 220);
+  font-weight: bold;
+  color: white;
+  margin-right: 8px;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgb(147, 86, 220);
+  background: rgb(147, 86, 220);
+  border-width: thin;
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .BoutonsChoix {
+    margin: 0 auto;
+    margin-left: 2em;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.Explorer {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.Explorer h1 {
+  font-size: 1.6em;
+}
+.Explorer p {
+  font-size: 1.1em;
+}
+
+.ExplorerText {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.ExplorerBouton {
+  border-radius: 2cap;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding-top: 1.4em;
+  padding-bottom: 1.4em;
+  width: 63%;
+  max-width: 200px;
+  height: 45%;
+  font-size: 0.9em;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: normal;
+  margin-bottom: 1.5em;
+  display: grid;
+  align-content: space-between;
+}
+
+.Restaurants {
+  background-color: rgb(243, 243, 243);
+  padding: 2em 1em;
+  margin-top: 4em;
+}
+
+.restaurantsTitle {
+  margin-bottom: 1.5em;
+}
+
+.restaurantCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+}
+.card .cardImage {
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.card .cardheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.card .cardTitle {
+  margin: 0;
+  font-size: 1.1em;
+}
+.card .cardLocalisation {
+  margin: 0;
+  padding: 0 15px 15px 15px;
+  font-weight: 300;
+}
+.card .heart-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.card .heartIcon {
+  font-size: 1.5em;
+  position: relative;
+  cursor: pointer;
+}
+.card .heartIcon .fa-solid.fa-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text; /* Nécessaire pour certain navigateurs même chose que background-clip: text */
+  background-clip: text; /*  Découpe l'arrière plan avec texte à la dimension du texte */
+  color: transparent; /* Comme le fond est découpé à la forme du texte, en rendant le texte transparent la couleur du fond apparait : dégradé en l'occurrence  */
+}
+.card .heart-checkbox:checked + .heartIcon .fa-solid.fa-heart {
+  opacity: 1;
+  transform: scale(1);
+}
+.card--palette .cardImage {
+  background-image: url("../../images/restaurants/1 - La palette du gout.jpg");
+}
+.card--note .cardImage {
+  background-image: url("../../images/restaurants/2 - La note enchantée.jpg");
+}
+.card--francaise .cardImage {
+  background-image: url("../../images/restaurants/3 - A la francaise.jpg");
+}
+.card--delice .cardImage {
+  background-image: url("../../images/restaurants/4 - Le delice des sens.jpg");
+}
+
+footer {
+  background-color: #353535;
+  color: rgb(255, 255, 255);
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.logoMini {
+  width: 130px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  margin-bottom: 1em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+i {
+  width: 20px;
+  margin-right: 0.5em;
+}

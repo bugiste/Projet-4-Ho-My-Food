@@ -1,0 +1,9 @@
+.button {
+  background: linear-gradient(360deg, rgb(147, 86, 220) -11%, rgb(255, 121, 218) 123%);
+  color: white;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button:hover {
+  background: linear-gradient(356deg, #a86ee0 0%, #b493de 33%, #ff93e1 100%);
+}/*# sourceMappingURL=Boutons.css.map */

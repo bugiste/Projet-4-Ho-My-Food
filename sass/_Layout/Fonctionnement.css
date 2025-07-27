@@ -1,0 +1,144 @@
+@charset "UTF-8";
+.fonctionnement {
+  display: grid;
+  align-content: space-between;
+}
+.fonctionnement h2 {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0.4em;
+}
+
+.BoutonsChoix {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  /* Espace entre les boutons */
+}
+.BoutonsChoix button {
+  margin: 0 auto;
+  /* Marge automatique à gauche/droite */
+  width: 80%;
+  height: 2.5em;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 1.5em;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  align-content: center;
+  gap: 10px;
+  padding: 1em;
+}
+.BoutonsChoix button::before {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  content: "1";
+  color: rgb(147, 86, 220);
+  font-weight: bold;
+  color: white;
+  margin-right: 8px;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgb(147, 86, 220);
+  background: rgb(147, 86, 220);
+  border-width: thin;
+  width: 20px;
+  height: 20px;
+}
+.BoutonsChoix button i {
+  margin-right: 10px;
+}
+.BoutonsChoix button.choix2 {
+  margin: 0 auto;
+  /* Marge automatique à gauche/droite */
+  width: 80%;
+  height: 2.5em;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 1.5em;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 15px;
+}
+.BoutonsChoix button.choix2::before {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  content: "2";
+  color: rgb(147, 86, 220);
+  font-weight: bold;
+  color: white;
+  margin-right: 8px;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgb(147, 86, 220);
+  background: rgb(147, 86, 220);
+  border-width: thin;
+  width: 20px;
+  height: 20px;
+}
+.BoutonsChoix button.choix3 {
+  margin: 0 auto;
+  /* Marge automatique à gauche/droite */
+  width: 80%;
+  height: 2.5em;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 1.5em;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 15px;
+}
+.BoutonsChoix button.choix3::before {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  content: "3";
+  color: rgb(147, 86, 220);
+  font-weight: bold;
+  color: white;
+  margin-right: 8px;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgb(147, 86, 220);
+  background: rgb(147, 86, 220);
+  border-width: thin;
+  width: 20px;
+  height: 20px;
+}
+
+.Restaurants {
+  margin-top: 4em;
+}/*# sourceMappingURL=Fonctionnement.css.map */

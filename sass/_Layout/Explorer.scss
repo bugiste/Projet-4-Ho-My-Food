@@ -1,0 +1,53 @@
+@use "../utils/Variables" as *;
+@use "../Components/Boutons" as *;
+
+
+ .Explorer{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  
+  text-align: center;
+
+
+ h1 {
+  font-size: 1.6em;
+  // text-align: center;
+ }
+
+p {     
+    font-size: 1.1em;
+    // font-weight: normal;
+}
+}
+
+.ExplorerText {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.ExplorerBouton{
+  @extend .button;
+  border-radius: 2cap;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding-top: 1.4em;
+  padding-bottom: 1.4em;
+  width: 63%;
+  max-width: 200px;
+  height: 45%;
+  font-size: 0.9em;
+}
+
+h2{     
+    font-size: 1em;
+    font-weight: normal;
+    // margin: 0.4em;
+     margin-bottom: 1.5em; 
+
+    display: grid;
+    align-content: space-between;
+  //   text-align: center;
+
+}

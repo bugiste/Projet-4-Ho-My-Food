@@ -1,0 +1,51 @@
+// 1. Utilitaires (Variables, Fonctions, Mixins)
+// Doivent être importés en premier car ils ne génèrent pas de CSS direct
+// mais sont utilisés par les autres fichiers.
+@use "utils/Variables" as *;
+@use "utils/Fonctions" as *;
+@use "utils/mixins" as *;
+
+
+// 2. Base (Reset, styles de base pour les balises HTML)
+@use "_base/normalize" as *;
+// @use "_base/base" as *;
+
+
+// 3. Composants (Éléments réutilisables)
+@use "Components/Boutons" as *;
+@use "Components/BoutonsChoix" as *;
+
+
+
+// 4. Layout (Structure principale de la page)
+@use "_Layout/Header" as *;
+@use "_Layout/Fonctionnement" as *;
+@use "_Layout/Explorer" as *;
+@use "_Layout/Restaurants" as *;
+@use "_Layout/Footer" as *;
+@use "_Layout/Responsive" as *;
+
+
+
+
+// $color: rgb(247, 240, 240);
+// body { background: $color; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

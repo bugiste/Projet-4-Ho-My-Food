@@ -1,0 +1,99 @@
+@use "../utils/Variables" as *;
+@use "../utils/mixins" as *;
+
+.Restaurants {
+  background-color: $Gris;
+  padding: 2em 1em;
+  margin-top: 4em;
+}
+
+.restaurantsTitle {
+    margin-bottom: 1.5em;
+}
+
+.restaurantCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.card {
+  background-color: $Blanc;
+
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+
+
+ .cardImage {
+    height: 170px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .cardheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .cardTitle {
+    margin: 0;
+    font-size: 1.1em;
+  }
+
+  .cardLocalisation {
+    margin: 0;
+    padding: 0 15px 15px 15px;
+    font-weight: 300;
+  }
+
+  .heart-checkbox {
+    // display: none;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+
+  .heartIcon {
+    font-size: 1.5em;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .heartIcon .fa-solid.fa-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  // transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text; /* Nécessaire pour certain navigateurs même chose que background-clip: text */
+  background-clip: text;/*  Découpe l'arrière plan avec texte à la dimension du texte */
+  color: transparent; /* Comme le fond est découpé à la forme du texte, en rendant le texte transparent la couleur du fond apparait : dégradé en l'occurrence  */
+  }
+
+ .heart-checkbox:checked + .heartIcon .fa-solid.fa-heart {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+
+
+
+  // C'est ici qu'on utilise le mixin pour chaque carte !
+  &--palette { @include RestaurantCardImagebackground-image("../../images/restaurants/1 - La palette du gout.jpg"); }
+  &--note { @include RestaurantCardImagebackground-image("../../images/restaurants/2 - La note enchantée.jpg"); }
+  &--francaise { @include RestaurantCardImagebackground-image("../../images/restaurants/3 - A la francaise.jpg"); }
+  &--delice { @include RestaurantCardImagebackground-image("../../images/restaurants/4 - Le delice des sens.jpg"); }
+
+}
+
