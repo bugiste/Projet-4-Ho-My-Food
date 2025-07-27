@@ -9,13 +9,16 @@
   background: linear-gradient(356deg, #a86ee0 0%, #b493de 33%, #ff93e1 100%);
 }
 
-.logo {
+.header {
+  padding: 1em 0;
   display: flex;
+  justify-content: center;
+}
+
+.logo {
   max-width: 300px;
   height: auto;
   margin-bottom: 1.5em;
-  align-items: center;
-  justify-content: center;
 }
 
 .barreRech {
@@ -38,7 +41,7 @@
   font-size: 0.8em;
 }
 
-.fonctionnement h2 {
+h2 {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 1.5em;
