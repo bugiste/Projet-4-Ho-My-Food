@@ -5,29 +5,28 @@
 // @use "../utils/mixins" as BoutonsChoix; // Importez le fichier mixins avec le namespace "BoutonsChoix"
 // @use "_Layout/Restaurants" as *;
 
-.fonctionnement {
+// .fonctionnement {
 
   //   background-color: #f8f8f8;
-  &--h2{
-    margin-bottom: 2em;
-    }
-  }
+  // &--h2{
+  //   margin-bottom: 2em;
+  //   }
+  // }
 
 
     h2{
-     
-    font-size: 1em;
-    font-weight: normal;
+
+    font-size: 1.5em;
+    // font-weight: normal;
+    font-weight: bold;
     // margin: 0.4em;
      margin-bottom: 1.5em; 
- 
-
-  display: grid;
-  align-content: space-between;
+  // display: grid;
+  // align-content: space-between;
   //   text-align: center;
 
 }
-
+// }
 
 .BoutonsChoix {
   display: flex;
