@@ -1,22 +1,21 @@
 @use "../utils/Variables" as *;
 @use "../Components/Boutons" as *;
 
-.header {
-  padding: 1em 0;
-//   width: 100%; // ou une valeur fixe
+header {
   display: flex;
-  justify-content: center; // Centrage horizontal du logo dans le header
-//   align-items: center;
+  flex-direction: column;  
+  align-items: center;
  }
 
 
 .logo{  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;
     max-width: 300px;
     height: auto;
     margin-bottom: 1.5em;
-    // display: flex;  
-    // align-items: center;  
-    // justify-content: center;
+    
   }
 
 .barreRech {
