@@ -1,57 +1,5 @@
 @use "Variables" as *;
 
-// @mixin bouton-choix($numero, $icone: null) {
-@mixin bouton-choix($numero) {
-  // position: relative;
-  // display: block;
-  margin: 0 auto;
-  /* Marge automatique à gauche/droite */
-  width: 90%;
-  height: 2.5em;
-  display: flex;
-  // justify-content: center;
-  flex-direction:row;
-  align-content: center;
-  align-items: center;
-
-  // padding-left: 0.5em; // Espace pour l'icône
-  padding-bottom: 1.5em;
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-right: 15px;
-  
-  // Gestion du numéro (toujours affiché)
-  &::before {
-     display: flex;
-     align-items: center;
-     align-content: center;
-     justify-content: center;
-
-    content: "#{$numero}";
-    color: $Violet;
-    font-weight: bold;
-    color: white;
-    margin-right: 8px;
-    text-align: center;
-
-    // pastille couleur violette 
-    display: flex;
-    // justify-content: center;
-    align-content: center;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: $Violet;
-    background: $Violet;
-    border-width: thin;
-    width: 20px;
-    height: 20px;
-
-  }  
-}
-
 
 @mixin RestaurantCardImagebackground-image($image-url) {
 

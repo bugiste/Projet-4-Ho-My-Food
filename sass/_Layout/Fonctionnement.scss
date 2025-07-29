@@ -1,83 +1,84 @@
-// @use "../Components/";
 @use "../utils/mixins" as *;
-// @use "../Components/BoutonsChoix";
 @use "../utils/Variables" as *; // Vous aurez sûrement besoin des variables aussi.
-// @use "../utils/mixins" as BoutonsChoix; // Importez le fichier mixins avec le namespace "BoutonsChoix"
-// @use "_Layout/Restaurants" as *;
 
-// .fonctionnement {
-
-  //   background-color: #f8f8f8;
-  // &--h2{
-  //   margin-bottom: 2em;
-  //   }
-  // }
-
+.fonctionnement {
+    padding: 2em 1em;
+  }
 
     h2{
     font-size: 1.5em;
-    // font-weight: normal;
-    font-weight: bold;
-    // margin: 0.4em;
-     margin-bottom: 1.5em; 
-  // display: grid;
-  // align-content: space-between;
-  //   text-align: center;
-
+    font-weight: bold;    
+     margin: 0 0 1.5em 0;  
 }
-// }
 
 .BoutonsChoix {
+  max-width: 22em;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
+  flex-direction: column; 
+  
   gap: 1em;
   /* Espace entre les boutons */
-
+   counter-reset: steps; // Initialise un compteur pour les étapes
 
   button {
-    @include bouton-choix("1"); // Icône "restaurant" FA
-   
+    // Styles communs à tous les boutons
+    position: relative; // Nécessaire pour le positionnement de la pastille
+    background-color: $Gris_bouton;
+    border: 1px solid transparent; // Bordure transparente pour éviter le décalage au hover
+    border-radius: 20px; // Un peu plus arrondi pour un style plus doux
+    padding: 1.5em;
+    padding-left: 2.5em; // Espace pour la pastille numérotée
     display: flex;    
     align-items: center;
-    // align-content: flex-start; Pas besoin ici
-    align-content: center;
-    gap: 10px;
-    padding:1em;
+    gap: 1.5em; // Espace plus généreux entre l'icône et le texte
+    width: 100%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap; // Empêche le texte de passer à la ligne
+   overflow: hidden; // Cache le contenu qui dépasse
+    text-overflow: ellipsis; // Ajoute "..." si le texte est trop long
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+     &:hover {
+      background-color: lighten($Violet, 35%);
+    }
+
+    &::before {
+      counter-increment: steps; // Incrémente le compteur pour chaque bouton
+      content: counter(steps); // Affiche la valeur du compteur
+      position: absolute;
+      left: -12px; // Positionne la pastille légèrement à l'extérieur
+      display: grid;
+      place-items: center; // Centre parfaitement le numéro
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background-color: $Violet;
+      color: white;
+    }
 
     i {
-    margin-right: 10px; // Appliqué à tous les boutons
-    }
-
-    // @include BoutonsChoix.bouton-choix("1"); // Icône "restaurant" FA
-    &.choix2 {
-      //   @include bouton-choix("2", "\f787", #2196F3); // Icône "utensils" + bleu
-      @include bouton-choix("2"); // Icône "utensils" + bleu
-    }
-
-    &.choix3 {
-      @include bouton-choix("3"); // Icône "smile" + vert
-      //   @include bouton-choix("3", "\f54e", #4CAF50, right); // Icône "smile" + vert
-    }
+       color: $Gris-Icone;
   }
   }
-
+}
   @media screen and (min-width: $breakpoint-tablet) {
 
-    h2 {
-    //  padding-left: 2em;
-    //  padding-right: 2em;
-    margin-left: 2em;
-    margin-right: 2em;
-    }
+  .fonctionnement {
+    padding: 2em; // On augmente l'espacement pour les écrans plus larges
+  }   
 
-    .BoutonsChoix {
-      margin: 0 auto;
-      margin-left: 2em;
-      margin-right: 2em;
-      display: flex;
+   
+    .BoutonsChoix {      
+      // On laisse le conteneur prendre toute la largeur de son parent (.fonctionnement)
+      // et on aligne les boutons en ligne.
+      max-width: 100%;
       flex-direction: row;
-      justify-content: space-between;
+      gap: 2em; // Espace entre les boutons
+
+      button {
+        flex: 1; // Permet aux boutons de se partager l'espace disponible
+      }
     }
-  }
+}
