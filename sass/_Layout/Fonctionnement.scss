@@ -3,6 +3,7 @@
 
 .fonctionnement {
     padding: 2em 1em;
+    // width: 90%;
   }
 
     h2{
@@ -34,15 +35,13 @@
     gap: 1.5em; // Espace plus généreux entre l'icône et le texte
     width: 100%;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    white-space: nowrap; // Empêche le texte de passer à la ligne
-   overflow: hidden; // Cache le contenu qui dépasse
-    text-overflow: ellipsis; // Ajoute "..." si le texte est trop long
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
      &:hover {
       background-color: lighten($Violet, 35%);
     }
+
 
     &::before {
       counter-increment: steps; // Incrémente le compteur pour chaque bouton
