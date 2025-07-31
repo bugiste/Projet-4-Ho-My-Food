@@ -97,3 +97,14 @@
 
 }
 
+
+
+@media screen and (min-width: $breakpoint-tablet) {
+  .restaurantCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // 2 colonnes de largeur égale
+  // grid-template-rows: 1fr;
+  // grid-template-columns: 1fr;
+  gap: 25px;
+}
+}

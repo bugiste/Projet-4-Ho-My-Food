@@ -24,6 +24,7 @@
 
   button {
     // Styles communs à tous les boutons
+    font-family: $font-secondary; // Utilise la police secondaire
     position: relative; // Nécessaire pour le positionnement de la pastille
     background-color: $Gris_bouton;
     border: 1px solid transparent; // Bordure transparente pour éviter le décalage au hover
@@ -64,20 +65,16 @@
 }
   @media screen and (min-width: $breakpoint-tablet) {
 
-  .fonctionnement {
-    padding: 2em; // On augmente l'espacement pour les écrans plus larges
-  }   
-
+ 
    
     .BoutonsChoix {      
       // On laisse le conteneur prendre toute la largeur de son parent (.fonctionnement)
       // et on aligne les boutons en ligne.
-      max-width: 100%;
+      max-width: 96%;
       flex-direction: row;
-      gap: 2em; // Espace entre les boutons
+      gap: 1.5em; // Espace entre les boutons
+     
 
-      button {
-        flex: 1; // Permet aux boutons de se partager l'espace disponible
-      }
     }
+
 }

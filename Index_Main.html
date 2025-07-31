@@ -7,7 +7,11 @@
     <title>Ohmyfood</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -46,9 +50,9 @@
     <section class="Fonctionnement">
         <h2>Fonctionnement</h2>
         <div class="BoutonsChoix">
-            <button class="choix1"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</button>
-            <button class="choix2"><i class="fa-solid fa-list-ul"></i>Composer votre menu</button>
-            <button class="choix3"><i class="fa-solid fa-store"></i>Déguster au restaurant</button>
+            <button class="choix1"><i class="fa-solid fa-mobile-screen-button"></i><span>Choisissez un restaurant</span></button>
+            <button class="choix2"><i class="fa-solid fa-list-ul"></i><span>Composer votre menu</span></button>
+            <button class="choix3"><i class="fa-solid fa-store"></i><span>Déguster au restaurant</span></button>
         </div>
     </section>
     
@@ -56,14 +60,26 @@
         <h2 class="restaurantsTitle">Restaurants</h2>
         <div class="restaurantCards">
             <!-- Carte 1 -->
+            <article class="Card">
+
+                <div class="restaurant>Cards">
             
-            <a href="#" class="card card--palette">
+                <a href="../_pages/Palette.html" class="card card--palette"> 
+
+
                 <div class="cardImage">                    
                 </div>    
                                 
                 <div class="cardheader">
                     <h3 class="cardTitle">La palette du goût</h3>
-                 
+                </div>
+                <p class="cardLocalisation">Ménilmontant</p>
+                    
+                    <!-- <a href="#" class="cardLink">
+                        <i class="fa-solid fa-arrow-right"></i> -->
+             </a>
+                    
+
                 <div class="heartContainer">
                         <input type="checkbox" class="heart-checkbox" id="heart-palette">
                         <label for="heart-palette" class="heartIcon">
@@ -72,11 +88,11 @@
                         </label>
                 </div>    
 
-
-                </div>
-                <p class="cardLocalisation">Ménilmontant</p>
+            </article>
+                
+               
             
-            </a>
+            
             
             <!-- Carte 2 -->                            
                 <a href="#" class="card card--note">
@@ -142,17 +158,25 @@
             </a>
 
         </div>
-    </section>   
+        </article>
+    </section>
+
+   
+     
 
     </main>
 
      <footer>
         
-         <img src="./images/logo/ohmyfood.png" class="logoMini">   
+         <img src="./images/logo/ohmyfood.png" class="logoMini" alt="Logo Ho My Food"> 
+
+        <div class="footerMentions">  
         <p><i class="fa-solid fa-utensils"></i> <a href="#">Proposer un restaurant</a></p>
         <p><i class="fa-solid fa-handshake-angle"></i> <a href="#">Devenir partenaire</a></p>
         <p><a href="#">Mentions légales</a></p>
         <p><a href="mailto:contact@ohmyfood.com">Contact</a></p>
+        </div>
+        
     </footer>
 
 </body>
