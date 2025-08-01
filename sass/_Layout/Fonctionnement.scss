@@ -4,7 +4,7 @@
 .fonctionnement {
     padding: 2em 1em;
     // width: 90%;
-  }
+  // }
 
     h2{
     font-size: 1.5em;
@@ -44,6 +44,7 @@
     }
 
 
+
     &::before {
       counter-increment: steps; // Incrémente le compteur pour chaque bouton
       content: counter(steps); // Affiche la valeur du compteur
@@ -63,6 +64,11 @@
   }
   }
 }
+
+
+
+
+
   @media screen and (min-width: $breakpoint-tablet) {
 
  
@@ -73,8 +79,6 @@
       max-width: 96%;
       flex-direction: row;
       gap: 1.5em; // Espace entre les boutons
-     
-
     }
-
+  
 }
