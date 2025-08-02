@@ -36,7 +36,8 @@ header {
 .fonctionnement {
   padding: 2em 1em;
 }
-.fonctionnement .BoutonsChoix {
+
+.BoutonsChoix {
   max-width: 22em;
   margin: 0 auto;
   display: flex;
@@ -45,7 +46,7 @@ header {
   /* Espace entre les boutons */
   counter-reset: steps;
 }
-.fonctionnement .BoutonsChoix button {
+.BoutonsChoix button {
   font-family: "Roboto", sans-serif;
   position: relative;
   background-color: rgb(246, 246, 246);
@@ -62,10 +63,10 @@ header {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.fonctionnement .BoutonsChoix button:hover {
-  background-color: rgb(241.5, 233.875, 250.625);
+.BoutonsChoix button:hover {
+  background-color: rgb(184.8, 145.15, 232.25);
 }
-.fonctionnement .BoutonsChoix button::before {
+.BoutonsChoix button::before {
   counter-increment: steps;
   content: counter(steps);
   position: absolute;
@@ -78,17 +79,17 @@ header {
   background-color: rgb(147, 86, 220);
   color: white;
 }
-.fonctionnement .BoutonsChoix button i {
+.BoutonsChoix button i {
   color: rgb(126, 126, 126);
 }
+
 @media screen and (min-width: 768px) {
-  .fonctionnement .BoutonsChoix {
+  .BoutonsChoix {
     max-width: 96%;
     flex-direction: row;
     gap: 1.5em;
   }
 }
-
 .Explorer {
   margin: 0;
   display: flex;

@@ -1,12 +1,11 @@
 @use "../utils/mixins" as *;
 @use "../utils/Variables" as *; // Vous aurez sûrement besoin des variables aussi.
+@use "sass:color";
 
 .fonctionnement {
     padding: 2em 1em;
     // width: 90%;
-  // }
-
-  
+  } 
 
 .BoutonsChoix {
   max-width: 22em;
@@ -35,9 +34,14 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+  // }
+
+
      &:hover {
-      background-color: lighten($Violet, 35%);
-    }
+      // background-color: .adjust($violet, $lightness: 35%);
+      // background-color: lighten($Violet, 35%);
+      background-color: color.scale($Violet, $lightness: 35%);
+        }
 
     &::before {
       counter-increment: steps; // Incrémente le compteur pour chaque bouton
@@ -74,5 +78,4 @@
       gap: 1.5em; // Espace entre les boutons
     }
   
-}
 }
