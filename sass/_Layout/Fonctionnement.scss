@@ -38,8 +38,7 @@
 
 
      &:hover {
-      // background-color: .adjust($violet, $lightness: 35%);
-      // background-color: lighten($Violet, 35%);
+     
       background-color: color.scale($Violet, $lightness: 35%);
         }
 
