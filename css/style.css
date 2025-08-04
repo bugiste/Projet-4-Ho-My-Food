@@ -19,11 +19,30 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   width: 100%;
   height: 2.5em;
+  padding: 1em 1em;
+}
+
+.flecheArriere {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.barreRech {
+  width: 100%;
+  height: 2.5em;
+  background-color: rgb(243, 243, 243);
   border: solid grey; /* Style et couleur communs */
   border-width: 1px 0 2px 0; /* (haut droite bas gauche) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 .localisation {
@@ -110,6 +129,7 @@ header {
 }
 
 .ExplorerBouton {
+  /* composants partageant une base commune (ex: boutons, cartes). */
   padding: 1em 2em;
   border-radius: 50px;
   margin: 1.5em 0 3em 0;
@@ -188,14 +208,26 @@ header {
   opacity: 1;
   transform: scale(1);
 }
+.card--palette {
+  /*A vérifier utilité */
+}
 .card--palette .cardImage {
   background-image: url("../../images/restaurants/1 - La palette du gout.jpg");
+}
+.card--note {
+  /*A vérifier utilité */
 }
 .card--note .cardImage {
   background-image: url("../../images/restaurants/2 - La note enchantée.jpg");
 }
+.card--francaise {
+  /*A vérifier utilité */
+}
 .card--francaise .cardImage {
   background-image: url("../../images/restaurants/3 - A la francaise.jpg");
+}
+.card--delice {
+  /*A vérifier utilité */
 }
 .card--delice .cardImage {
   background-image: url("../../images/restaurants/4 - Le delice des sens.jpg");

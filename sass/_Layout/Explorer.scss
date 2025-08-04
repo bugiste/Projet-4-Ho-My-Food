@@ -28,7 +28,7 @@ p {
 }
 
 .ExplorerBouton{
-  @extend .button;
+  @extend .button; /* composants partageant une base commune (ex: boutons, cartes). */
   // La taille est définie par le padding, pas par une hauteur/largeur fixe
   padding: 1em 2em;
   border-radius: 50px; // Un rayon élevé pour une forme "pilule"

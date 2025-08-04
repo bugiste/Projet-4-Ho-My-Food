@@ -1,7 +1,7 @@
 @use "Variables" as *;
 
 
-@mixin RestaurantCardImagebackground-image($image-url) {
+@mixin RestaurantCardImagebackground-image($image-url) { /*A vérifier utilité */
 
  .cardImage { 
 background-image: url($image-url);
