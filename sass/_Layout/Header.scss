@@ -2,6 +2,12 @@
 @use "../Components/Boutons" as *;
 // @use "../pages/Palette" as *;
 
+body{
+  margin: 0;
+  padding: 0;  
+}
+
+
 header {
   display: flex;
   flex-direction: column;  
