@@ -15,22 +15,6 @@ header {
   
  }
 
-.flecheArriere {
-  position: absolute;
-  left: 1em;
-  right: 3em;
-  top: 1em;
-  font-size: 1.4em;
-  cursor: pointer;
-}
-
-.headerMenu {
-  display: flex;
-flex-direction: row;
-align-items: center;  
-align-content: center;
-}
-
 .logo{  
     display: flex;  
     align-items: center;  

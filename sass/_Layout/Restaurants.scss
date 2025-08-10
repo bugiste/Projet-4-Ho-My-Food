@@ -12,18 +12,59 @@
 //   font-size: 1.5em;
 // }
 
+.headerMenu {
+  display: flex;
+flex-direction: row;
+align-items: center;  
+align-content: center;
+}
 
+
+
+.flecheArriere {
+  position: absolute;
+  left: 1em;
+  right: 3em;
+  // top: 1em;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.logoRestau {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoRestau img {
+   max-height: 30px;  /* Ajustez cette valeur */
+    width: 100%;       /* Garde les proportions */
+    object-fit: contain; /* Évite la déformation */
+    margin-bottom: 0.5em;
+    margin-top: 1.5em;;
+}
 
 
 .Restaurants {
   background-color: $Gris;
   padding: 2em 1em;
   margin-top: 4em;
+  border-radius: 8px 8px 0 0;;
+  // border-top-left-radius: 8px;
+  // border-top-right-radius: 8px;
 }
 
 .restaurantsTitle {
     margin-bottom: 1.5em;
 }
+
+.paletteHeader{
+    // background: $Gris;
+    // background-color: $Gris_bouton;
+    background-color: rgb(31, 70, 138);
+  }
+
 
 .restaurantCards {
   display: grid;
@@ -66,6 +107,14 @@
     font-weight: 300;
   }
 
+  .restauNom {
+        font-family: "Shrikhand", serif;
+        font-size: 1.75em;
+        font-weight: 300;
+        color: $Noir
+  }
+
+
   .heart-checkbox {
     // display: none;
     position: absolute;
@@ -100,6 +149,64 @@
     transform: scale(1);
   }
 
+.menuCard {
+    padding: 1em;
+    display: flex;
+
+    // align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+    // flex-direction: row;
+    background-color: $Blanc;
+    width : 100%;
+    min-height: 3em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 1em;
+  }
+
+.menuCardContent {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+  .menuCardContent h3 {
+
+     margin: 0;
+    font-size: 1em;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // flex: 1;
+
+  }
+
+  .menuCardContent p {
+    margin: 0.3em 0 0 0;
+    font-size: 0.9em;
+    color: #666;
+    // flex: 1;
+}
+
+  .menuCardText{
+     display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0; /* Permet au text-overflow de fonctionner */
+  }
+
+
+  .prix {
+    font-weight: bold;
+    margin-left: 1em;
+    white-space: nowrap;
+}
 
 
 
@@ -126,7 +233,7 @@
                     // Page menu 
 
   .restaurantPhoto {
-    width: auto;
+    width: 100%;
     height: 170px;
     background-size: cover;
     background-position: center;
