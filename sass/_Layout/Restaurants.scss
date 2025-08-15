@@ -13,13 +13,13 @@
 // }
 
 .headerMenu {
-  display: flex;
+display: flex;
 flex-direction: row;
 align-items: center;  
 align-content: center;
+flex-wrap: nowrap;
+justify-content: center;
 }
-
-
 
 .flecheArriere {
   position: absolute;
@@ -28,6 +28,8 @@ align-content: center;
   // top: 1em;
   font-size: 1.4em;
   cursor: pointer;
+  padding-top : 0.5em;
+     
 }
 
 .logoRestau {
@@ -44,7 +46,6 @@ align-content: center;
     margin-bottom: 0.5em;
     margin-top: 1.5em;;
 }
-
 
 .Restaurants {
   background-color: $Gris;
@@ -64,7 +65,6 @@ align-content: center;
     // background-color: $Gris_bouton;
     background-color: rgb(31, 70, 138);
   }
-
 
 .restaurantCards {
   display: grid;
