@@ -12,6 +12,14 @@
 //   font-size: 1.5em;
 // }
 
+// h1 {
+//     font-size: inherit; /* Désactive la taille imposée par le navigateur */
+//     margin: 0; /* Supprime les marges */
+//     font-weight: inherit; /* Désactive le gras par défaut */
+// }
+
+
+
 .headerMenu {
 display: flex;
 flex-direction: row;
@@ -63,7 +71,7 @@ justify-content: center;
 .paletteHeader{
     // background: $Gris;
     // background-color: $Gris_bouton;
-    background-color: rgb(31, 70, 138);
+    // background-color: rgb(31, 70, 138);
   }
 
 .restaurantCards {
@@ -107,16 +115,33 @@ justify-content: center;
     font-weight: 300;
   }
 
-  .restauNom {
+  h2 {
+    font-size: inherit;
+    margin: 0;
+    font-weight: inherit;
+    // color: red !important; 
+}
+
+
+  .restauNom h2 {
+    
         font-family: "Shrikhand", serif;
-        font-size: 1.75em;
+        font-size: 2.75em;
         font-weight: 300;
-        color: $Noir
+        color: $Noir;
+        //  color: red !important; 
   }
 
+  .restauInfo {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
   .heart-checkbox {
-    // display: none;
+    display: none;
     position: absolute;
     opacity: 0;
     width: 0;
@@ -129,6 +154,13 @@ justify-content: center;
     position: relative;
     cursor: pointer;
   }
+
+.heart-btn {
+  font-size: 1.5em;
+    position: relative;
+    cursor: pointer;
+  }
+
 
   .heartIcon .fa-solid.fa-heart {
   position: absolute;
@@ -149,14 +181,31 @@ justify-content: center;
     transform: scale(1);
   }
 
+  .heart-checkbox:checked + .heartIcon .fa-solid.fa-heart:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+
+  .menu-section {
+  background-color: $Gris; /* Fond gris clair pour la section */
+  padding: 20px;
+}
+
+  .menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+
 .menuCard {
-    padding: 1em;
+    /* padding: 1em;
     display: flex;
 
     // align-items: center;
     justify-content: space-between;
     align-items: flex-start;
-
 
     // flex-direction: row;
     background-color: $Blanc;
@@ -166,46 +215,81 @@ justify-content: center;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     cursor: pointer;
-    margin-bottom: 1em;
+    margin-bottom: 1em; */
+
+    background-color: white; /* Fond blanc */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre légère */
+    padding: 15px;
+    aspect-ratio: 1/1; /* Rend la carte carrée */
+    display: flex;
+    flex-direction: column;
   }
+
+// .menuCardContent {
+//   display: flex;
+//   width: 100%;
+//   flex-direction: column;  
+//   justify-content: space-between;
+//   background-color: b$Blanc;
+//   border-radius: 15px;
+// }
 
 .menuCardContent {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  // flex-direction: column;
+  flex-direction row;
+  height: 100%;
 }
 
-  .menuCardContent h3 {
+.menuCardText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement */
+}
 
-     margin: 0;
-    font-size: 1em;
-    font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    // flex: 1;
+// .menuCardText h3 {
+//      margin: 0;
+//     font-size: 1em;
+//     font-weight: 600;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//   }
 
-  }
+.menuCardText h3 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} 
 
-  .menuCardContent p {
-    margin: 0.3em 0 0 0;
+  .menuCardText p {
+    margin: 0.5em 0 0 0;
     font-size: 0.9em;
     color: #666;
     // flex: 1;
 }
 
-  .menuCardText{
-     display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 0; /* Permet au text-overflow de fonctionner */
-  }
+  // .menuCardText{
+  //    display: flex;
+  //   flex-direction: column;
+  //   flex: 1;
+  //   min-width: 0; /* Permet au text-overflow de fonctionner */
+  // }
 
 
   .prix {
     font-weight: bold;
-    margin-left: 1em;
-    white-space: nowrap;
+    //  margin-top: auto; /* Place le prix en bas */
+    padding-top: 10px;
+    text-align: right; /* Aligne le prix à droite */
+  
+    font-size: 1.1em;
+   
 }
 
 
