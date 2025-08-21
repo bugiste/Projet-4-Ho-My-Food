@@ -178,6 +178,11 @@ header {
   margin-bottom: 1.5em;
 }
 
+/* .paletteHeader{
+    // background: $Gris;
+    // background-color: $Gris_bouton;
+    // background-color: rgb(31, 70, 138);
+  } */
 .restaurantCards {
   display: grid;
   grid-template-columns: 1fr;
@@ -332,27 +337,27 @@ header {
   text-align: right; /* Aligne le prix à droite */
   font-size: 1.1em;
 }
-.card--palette {
+/* .card--palette {
   /*A vérifier utilité */
-}
+} */
 .card--palette .cardImage {
   background-image: url("../../images/restaurants/1 - La palette du gout.jpg");
 }
-.card--note {
+/* .card--note {
   /*A vérifier utilité */
-}
+} */
 .card--note .cardImage {
   background-image: url("../../images/restaurants/2 - La note enchantée.jpg");
 }
-.card--francaise {
+/* .card--francaise {
   /*A vérifier utilité */
-}
+} */
 .card--francaise .cardImage {
   background-image: url("../../images/restaurants/3 - A la francaise.jpg");
 }
-.card--delice {
+/* .card--delice {
   /*A vérifier utilité */
-}
+} */
 .card--delice .cardImage {
   background-image: url("../../images/restaurants/4 - Le delice des sens.jpg");
 }

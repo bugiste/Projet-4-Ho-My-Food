@@ -68,11 +68,11 @@ justify-content: center;
     margin-bottom: 1.5em;
 }
 
-.paletteHeader{
+/* .paletteHeader{
     // background: $Gris;
     // background-color: $Gris_bouton;
     // background-color: rgb(31, 70, 138);
-  }
+  } */
 
 .restaurantCards {
   display: grid;
@@ -238,7 +238,7 @@ justify-content: center;
 .menuCardContent {
   display: flex;
   // flex-direction: column;
-  flex-direction row;
+  flex-direction: row;
   height: 100%;
 }
 
