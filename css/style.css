@@ -189,6 +189,22 @@ header {
   gap: 25px;
 }
 
+.restauInfo h2.restauNom {
+  font-size: 3.5em !important;
+  text-align: center !important;
+  margin: 0.5em 0 !important;
+  font-family: "Shrikhand", serif !important;
+  font-weight: 300 !important;
+}
+
+img .restaurantPhoto {
+  width: 100% !important;
+  height: 170px !important;
+  object-fit: cover !important; /* Remplace background-size: cover */
+  object-position: center !important; /* Remplace background-position: center */
+  display: block !important;
+}
+
 .card {
   background-color: rgb(255, 255, 255);
   text-decoration: none;
@@ -223,37 +239,67 @@ header {
   margin: 0;
   font-weight: inherit;
 }
-.card .restauNom h2 {
-  font-family: "Shrikhand", serif;
-  font-size: 2.75em;
-  font-weight: 300;
-  color: #353535;
+.card .restauInfo h2.restauNom {
+  font-size: 3.5em !important;
+  text-align: center !important;
+  margin: 0.5em 0 !important;
+  font-family: "Shrikhand", serif !important;
+  font-weight: 300 !important;
 }
-.card .restauInfo {
+.card--palette {
+  /*A vérifier utilité */
+}
+.card--palette .cardImage {
+  background-image: url("../../images/restaurants/1 - La palette du gout.jpg");
+}
+.card--note {
+  /*A vérifier utilité */
+}
+.card--note .cardImage {
+  background-image: url("../../images/restaurants/2 - La note enchantée.jpg");
+}
+.card--francaise {
+  /*A vérifier utilité */
+}
+.card--francaise .cardImage {
+  background-image: url("../../images/restaurants/3 - A la francaise.jpg");
+}
+.card--delice {
+  /*A vérifier utilité */
+}
+.card--delice .cardImage {
+  background-image: url("../../images/restaurants/4 - Le delice des sens.jpg");
+}
+
+.restauInfo {
   padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.card .heart-checkbox {
+
+.heart-checkbox {
   display: none;
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
 }
-.card .heartIcon {
+
+.heartIcon {
   font-size: 1.5em;
   position: relative;
   cursor: pointer;
 }
-.card .heart-btn {
+
+.heart-btn {
   font-size: 1.5em;
   position: relative;
   cursor: pointer;
 }
-.card .heartIcon .fa-solid.fa-heart {
+
+.heartIcon .fa-solid.fa-heart {
   position: absolute;
   top: 0;
   left: 0;
@@ -265,24 +311,29 @@ header {
   background-clip: text; /*  Découpe l'arrière plan avec texte à la dimension du texte */
   color: transparent; /* Comme le fond est découpé à la forme du texte, en rendant le texte transparent la couleur du fond apparait : dégradé en l'occurrence  */
 }
-.card .heart-checkbox:checked + .heartIcon .fa-solid.fa-heart {
+
+.heart-checkbox:checked + .heartIcon .fa-solid.fa-heart {
   opacity: 1;
   transform: scale(1);
 }
-.card .heart-checkbox:checked + .heartIcon .fa-solid.fa-heart:hover {
+
+.heart-checkbox:checked + .heartIcon .fa-solid.fa-heart:hover {
   opacity: 0.8;
   transform: scale(1.1);
 }
-.card .menu-section {
+
+.menu-section {
   background-color: rgb(243, 243, 243); /* Fond gris clair pour la section */
   padding: 20px;
 }
-.card .menu-items {
+
+.menu-items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
-.card .menuCard {
+
+.menuCard {
   /* padding: 1em;
   display: flex;
 
@@ -307,18 +358,21 @@ header {
   display: flex;
   flex-direction: column;
 }
-.card .menuCardContent {
+
+.menuCardContent {
   display: flex;
   flex-direction: row;
   height: 100%;
 }
-.card .menuCardText {
+
+.menuCardText {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centre verticalement */
 }
-.card .menuCardText h3 {
+
+.menuCardText h3 {
   margin: 0;
   font-size: 1.2em;
   font-weight: 600;
@@ -326,40 +380,18 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card .menuCardText p {
+
+.menuCardText p {
   margin: 0.5em 0 0 0;
   font-size: 0.9em;
   color: #666;
 }
-.card .prix {
+
+.prix {
   font-weight: bold;
   padding-top: 10px;
   text-align: right; /* Aligne le prix à droite */
   font-size: 1.1em;
-}
-/* .card--palette {
-  /*A vérifier utilité */
-} */
-.card--palette .cardImage {
-  background-image: url("../../images/restaurants/1 - La palette du gout.jpg");
-}
-/* .card--note {
-  /*A vérifier utilité */
-} */
-.card--note .cardImage {
-  background-image: url("../../images/restaurants/2 - La note enchantée.jpg");
-}
-/* .card--francaise {
-  /*A vérifier utilité */
-} */
-.card--francaise .cardImage {
-  background-image: url("../../images/restaurants/3 - A la francaise.jpg");
-}
-/* .card--delice {
-  /*A vérifier utilité */
-} */
-.card--delice .cardImage {
-  background-image: url("../../images/restaurants/4 - Le delice des sens.jpg");
 }
 
 @media screen and (min-width: 768px) {
@@ -368,14 +400,14 @@ header {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
+  .restaurantPhoto {
+    width: 100%;
+    height: 170px;
+    object-fit: cover; /* Remplace background-size: cover */
+    object-position: center; /* Remplace background-position: center */
+    display: block;
+  }
 }
-.restaurantPhoto {
-  width: 100%;
-  height: 170px;
-  background-size: cover;
-  background-position: center;
-}
-
 footer {
   background-color: #353535;
   color: rgb(255, 255, 255);

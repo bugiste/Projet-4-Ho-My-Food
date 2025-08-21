@@ -3,21 +3,6 @@
 @use "sass:color";
 
 
-// .flecheArriere {
-//   // position: absolute;
-//   // left: 1em;
-//   // top: 1.5em;
-//   cursor: pointer;
-//   // color: $Violet;
-//   font-size: 1.5em;
-// }
-
-// h1 {
-//     font-size: inherit; /* Désactive la taille imposée par le navigateur */
-//     margin: 0; /* Supprime les marges */
-//     font-weight: inherit; /* Désactive le gras par défaut */
-// }
-
 
 
 .headerMenu {
@@ -80,6 +65,23 @@ justify-content: center;
   gap: 25px;
 }
 
+
+.restauInfo h2.restauNom {
+  font-size: 3.5em !important;
+  text-align: center !important;
+  margin: 0.5em 0 !important;
+  font-family: "Shrikhand", serif !important;
+  font-weight: 300 !important;
+  // color: #353535;
+}
+
+img .restaurantPhoto {
+  width: 100% !important;
+  height: 170px !important;
+  object-fit: cover !important;     /* Remplace background-size: cover */
+  object-position: center !important; /* Remplace background-position: center */
+  display: block !important;
+}
 .card {
   background-color: $Blanc;
 
@@ -123,13 +125,25 @@ justify-content: center;
 }
 
 
-  .restauNom h2 {
-    
-        font-family: "Shrikhand", serif;
-        font-size: 2.75em;
-        font-weight: 300;
-        color: $Noir;
-        //  color: red !important; 
+
+
+
+.restauInfo h2.restauNom {
+  font-size: 3.5em !important;
+  text-align: center !important;
+  margin: 0.5em 0 !important;
+  font-family: "Shrikhand", serif !important;
+  font-weight: 300 !important;
+  // color: #353535;
+}
+   
+ // C'est ici qu'on utilise le mixin pour chaque carte !
+ &--palette { @include RestaurantCardImagebackground-image("../../images/restaurants/1 - La palette du gout.jpg"); }
+ &--note { @include RestaurantCardImagebackground-image("../../images/restaurants/2 - La note enchantée.jpg"); }
+ &--francaise { @include RestaurantCardImagebackground-image("../../images/restaurants/3 - A la francaise.jpg"); }
+ &--delice { @include RestaurantCardImagebackground-image("../../images/restaurants/4 - Le delice des sens.jpg"); }
+
+        
   }
 
   .restauInfo {
@@ -294,14 +308,7 @@ justify-content: center;
 
 
 
-  // C'est ici qu'on utilise le mixin pour chaque carte !
-  &--palette { @include RestaurantCardImagebackground-image("../../images/restaurants/1 - La palette du gout.jpg"); }
-  &--note { @include RestaurantCardImagebackground-image("../../images/restaurants/2 - La note enchantée.jpg"); }
-  &--francaise { @include RestaurantCardImagebackground-image("../../images/restaurants/3 - A la francaise.jpg"); }
-  &--delice { @include RestaurantCardImagebackground-image("../../images/restaurants/4 - Le delice des sens.jpg"); }
-
-}
-
+ 
 
 
 @media screen and (min-width: $breakpoint-tablet) {
@@ -312,15 +319,15 @@ justify-content: center;
   // grid-template-columns: 1fr;
   gap: 25px;
 }
-}
+
 
                     // Page menu 
 
   .restaurantPhoto {
     width: 100%;
     height: 170px;
-    background-size: cover;
-    background-position: center;
-    // border-top-left-radius: 15px;
-    // border-top-right-radius: 15px;
+    object-fit: cover;     /* Remplace background-size: cover */
+    object-position: center; /* Remplace background-position: center */
+    display: block;
   }
+}

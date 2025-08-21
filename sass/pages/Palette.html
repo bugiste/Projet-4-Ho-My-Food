@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Palette du goût</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Font Awesome EN PREMIER -->
     <script src="https://kit.fontawesome.com/e9c9fb0317.js" crossorigin="anonymous"></script>
+    <!-- Votre CSS EN SECOND -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        /* TEST: Ce style doit apparaître dans DevTools */
+        img.restaurantPhoto {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            background-color: red; /* Temporaire pour test */
+        }
+    </style>
+
+
+
 </head>
 
 <body>
@@ -68,7 +83,7 @@
                             <span class="prix">25€</span>
                         
                         </div>
-                    
+                    </div>
                     <!-- Carte Entrée 2 -->
                     <div class="menuCard">
                         <div class="menuCardContent">
@@ -80,7 +95,7 @@
                     
                     <!-- Carte Entrée 3 -->
                     <div class="menuCard">
-                        <div class="menu-cad-content">
+                        <div class="menuCardContent">
                             <h3>Œuf au plat</h3>
                             <p>Assaisonné à la truffe sur lit de caviar</p>
                             <span class="prix">20€</span>
